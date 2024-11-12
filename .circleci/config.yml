@@ -6,7 +6,8 @@ jobs:
       - image: circleci/node:latest
     steps:
       - checkout
-      - run: npm init -y
+      - run: npm init -
+      - run: npm install --save-dev jest
       - run: npm test
       - run:
           name: Run SonarQube Scan
