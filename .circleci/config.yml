@@ -11,9 +11,9 @@ jobs:
       - run:
           name: Run SonarQube Scan
           command: |
-            export SONAR_TOKEN=${SONAR_TOKEN}
+            export SONAR_TOKEN=ce6404fa48cd9535e0c3e14c6b70d4dbe0ef8213
             export SONAR_HOST_URL="https://sonarcloud.io"
-            ./gradlew sonarqube -Dsonar.login=$SONAR_TOKEN
+            ./gradlew sonarqube -Dsonar.login=ce6404fa48cd9535e0c3e14c6b70d4dbe0ef8213
 
 workflows:
   version: 2
