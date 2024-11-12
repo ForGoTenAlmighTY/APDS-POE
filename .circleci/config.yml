@@ -1,0 +1,22 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - checkout
+      - run: npm init -y
+      - run: npm install --save-dev jest
+      - run:
+          name: Run SonarQube Scan
+          command: |
+            export SONAR_TOKEN=ce6404fa48cd9535e0c3e14c6b70d4dbe0ef8213
+            export SONAR_HOST_URL="https://sonarcloud.io"
+            ./gradlew sonarqube -Dsonar.login=ce6404fa48cd9535e0c3e14c6b70d4dbe0ef8213
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
