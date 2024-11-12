@@ -1,0 +1,28 @@
+/* index.css */
+:root {
+  --primary-color: #004080;
+  --button-color: #0073e6;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.homepage, .employee-login-form, .customer-login-form, .register-form {
+  text-align: center;
+  margin: auto;
+  padding: 20px;
+}
+
+button {
+  background-color: var(--button-color);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+h1, h2 {
+  color: var(--primary-color);
+}
